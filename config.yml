@@ -1,0 +1,10 @@
+bot_token: "TELEGRAM_BOT_TOKEN"
+site_url: "SITE_TO_MONITORING"
+sleep_time:
+  default: 300
+  error: 60
+messages:
+  ok: "Dinda site is ok!"
+  check_it: "We have problems? Dinda site is ok? Status:"
+  down: "Mayday! Mayday! Dinda site is down!"
+  return_down: "Wow! Dinda site is ok now! #GoDinda"
