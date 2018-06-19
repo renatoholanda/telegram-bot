@@ -12,8 +12,6 @@ class MonitorBot
     #   puts "@#{message.from.username}: #{message.text}"
     #   command = message.get_command_for(@bot)
 
-    #   pp message.chat.id
-      
     #   message.reply do |reply|
     #     case command
     #     when /register/i
@@ -40,6 +38,7 @@ class MonitorBot
   def init_loop
     sleep_time = $config["sleep_time"]
     messages = $config["messages"]
+    send_message messages["connected"]
 
     loop do
       begin
