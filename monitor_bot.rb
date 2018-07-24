@@ -70,14 +70,18 @@ class MonitorBot
   end
   
   def send_message(text)
-    puts text
-    ids = File.readlines('ids.txt');
-
-    ids.each do |id|
-      msg = Message.new
-      msg.chat_id = id
-      msg.text = text
-      @bot.send_message(msg)
+    begin
+      puts text
+      ids = File.readlines('ids.txt');
+  
+      ids.each do |id|
+        msg = Message.new
+        msg.chat_id = id
+        msg.text = text
+        @bot.send_message(msg)
+      end
+    rescue => exception
+      puts exception      
     end
   end
 end
